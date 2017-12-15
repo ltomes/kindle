@@ -10,3 +10,8 @@ export function get(k) {
 export function set(k, v) {
     localStorage.setItem(k, v)
 }
+
+module.exports = {
+    get: get,
+    set:set
+}
