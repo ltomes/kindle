@@ -2,9 +2,15 @@
   "name": "kindle",
   "version": "0.0.1",
   "description": "A localstorage key search utility",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "lint": "./node_modules/.bin/tslint -p tslint.json",
+    "build": "./node_modules/.bin/tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "tslint": "^5.8.0",
+    "typescript": "^2.5.3"
   },
   "repository": {
     "type": "git",
@@ -18,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/ltomes/kindle/issues"
   },
-  "homepage": "https://github.com/ltomes/kindle#readme"
+  "homepage": "https://github.com/ltomes/kindle#readme",
+  "dependencies": {
+    "@types/node": "^9.4.0"
+  }
 }
