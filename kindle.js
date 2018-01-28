@@ -1,6 +1,6 @@
-export function getTokens (k) {
+export function getTokens () {
     let results = {};
-    for (v in localStorage) {
+    for (let v in localStorage) {
         if (v.indexOf('firebase:authUser:') !== -1) {
             results[v] = localStorage.getItem(v);
         }
