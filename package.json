@@ -2,7 +2,7 @@
   "name": "kindle",
   "version": "0.0.1",
   "description": "A localstorage key search utility",
-  "main": "dist/index.js",
+  "main": "dist/kindle.js",
   "scripts": {
     "lint": "./node_modules/.bin/tslint -p tslint.json",
     "build": "./node_modules/.bin/tsc",
