@@ -3,9 +3,10 @@
     "lib": ["es6", "dom"],
     "module": "commonjs",
     "noImplicitReturns": true,
+    "importHelpers": true,
     "outDir": "dist",
     "sourceMap": true,
-    "target": "ES2016"
+    "target": "es2016"
   },
   "compileOnSave": true,
   "include": [
