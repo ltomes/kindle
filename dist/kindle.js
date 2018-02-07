@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 function getTokens(query = 'firebase:authUser:', localStorageRef = localStorage) {
     const results = {};
-    for (const v in Object.keys(localStorageRef)) {
+    for (const v of Object.keys(localStorageRef)) {
         if (v.indexOf(query) !== -1) {
             results[v] = localStorageRef.getItem(v);
         }
