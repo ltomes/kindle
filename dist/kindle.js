@@ -1,10 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-function getTokens(query = 'firebase:authUser:') {
+function getTokens(query = 'firebase:authUser:', localStorageRef = localStorage) {
     const results = {};
-    for (const v in localStorage) {
+    for (const v in Object.keys(localStorageRef)) {
         if (v.indexOf(query) !== -1) {
-            results[v] = localStorage.getItem(v);
+            results[v] = localStorageRef.getItem(v);
         }
         return results;
     }
@@ -12,18 +12,18 @@ function getTokens(query = 'firebase:authUser:') {
 }
 exports.getTokens = getTokens;
 ;
-function setToken(k, v) {
+function setToken(k, v, localStorageRef = localStorage) {
     let vString;
     if (typeof v !== 'string') {
         vString = JSON.stringify(v);
     }
     ;
-    localStorage.setItem(k, vString || v);
+    console.log('localStorage');
+    console.log(localStorage);
+    console.log('localStorageRef');
+    console.log(localStorageRef);
+    localStorageRef.setItem(k, vString || v);
 }
 exports.setToken = setToken;
 ;
-// module.exports = {
-//     getTokens: getTokens,
-//     setToken: setToken
-// } 
 //# sourceMappingURL=kindle.js.map
