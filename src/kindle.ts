@@ -1,12 +1,11 @@
 export function getTokens (query = 'firebase:authUser:', localStorageRef = localStorage) {
-    const results = {};
+    let results = {};
     for (const v of Object.keys(localStorageRef)) {
         if (v.indexOf(query) !== -1) {
             results[v] = localStorageRef.getItem(v);
         }
-        return results;
     }
-    return null;
+    return results;
 };
 export function setToken (k, v, localStorageRef = localStorage) {
     let vString;

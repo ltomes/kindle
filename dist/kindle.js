@@ -1,14 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 function getTokens(query = 'firebase:authUser:', localStorageRef = localStorage) {
-    const results = {};
+    let results = {};
     for (const v of Object.keys(localStorageRef)) {
         if (v.indexOf(query) !== -1) {
             results[v] = localStorageRef.getItem(v);
         }
-        return results;
     }
-    return null;
+    return results;
 }
 exports.getTokens = getTokens;
 ;
