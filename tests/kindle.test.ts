@@ -1,5 +1,5 @@
 import * as uuid from 'uuid/v4';
-import { getTokens, setToken } from './kindle';
+import { getTokens, setToken } from './../src/kindle';
 it('getTokens method: returns {}', () => {
     const result = getTokens();
     expect(result).toEqual({});

@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "./node_modules/.bin/tslint -p tslint.json",
     "build": "./node_modules/.bin/tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/jest --coverage"
   },
   "devDependencies": {
     "@types/jest": "23.3.9",
@@ -47,7 +47,7 @@
       "^.+\\.(ts|tsx)$": "ts-jest"
     },
     "testMatch": [
-      "**/src/*.test.+(ts|tsx|js)"
+      "**/tests/*.test.+(ts|tsx|js)"
     ]
   }
 }
