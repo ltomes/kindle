@@ -1,16 +1,21 @@
 {
   "name": "kindle",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A localstorage key search utility",
   "main": "dist/kindle.js",
   "scripts": {
     "lint": "./node_modules/.bin/tslint -p tslint.json",
     "build": "./node_modules/.bin/tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/jest --coverage"
   },
   "devDependencies": {
-    "tslint": "^5.8.0",
-    "typescript": "^2.5.3"
+    "@types/jest": "23.3.9",
+    "codecov": "3.1.0",
+    "jest": "23.6.0",
+    "ts-jest": "23.10.4",
+    "tslint": "5.11.0",
+    "typescript": "3.1.6",
+    "uuid": "3.3.2"
   },
   "repository": {
     "type": "git",
@@ -26,6 +31,24 @@
   },
   "homepage": "https://github.com/ltomes/kindle#readme",
   "dependencies": {
-    "@types/node": "^9.4.0"
+    "@types/node": "10.12.5"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.json"
+      }
+    },
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "testMatch": [
+      "**/tests/*.test.+(ts|tsx|js)"
+    ]
   }
 }
