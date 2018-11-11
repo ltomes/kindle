@@ -6,6 +6,7 @@ node_js:
   - 6
 install:
   - npm ci
-script:
+  - npm install -g codecov
+  script:
   - npm run test
   - codecov -f coverage/*.json
