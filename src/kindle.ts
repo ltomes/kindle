@@ -1,4 +1,4 @@
-export function getTokens (query = 'firebase:authUser:', localStorageRef = localStorage) {
+export function getTokens (query = '', localStorageRef = localStorage) {
     let results = {};
     for (const v of Object.keys(localStorageRef)) {
         if (v.indexOf(query) !== -1) {
